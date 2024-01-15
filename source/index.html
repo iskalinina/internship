@@ -1,16 +1,113 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Программы стажировки за рубежом, в том числе в крупнейших компаниях мира. Помощь в получении грантов. Волонтерство и обучение.">
   <title>Internship programs</title>
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" href="img/favicon-32.png">
+  <link rel="preload" href="fonts/manrope-v15-cyrillic_cyrillic-ext_latin_latin-ext-300.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-v15-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/manrope-v15-cyrillic_cyrillic-ext_latin_latin-ext-500.woff2" as="font" crossorigin="anonymous">
 </head>
-
 <body>
-  <div data-test="slider">slider</div>
+  <div data-test="slider">
+    <header class="header">
+      <nav class="header__nav">
+        <a class="header__logo" href="#" aria-label="Логотип проекта Стажировки.">
+          <svg width="30" height="30" viewBox="0 0 30 30" role="img">
+            <use href="__spritemap#sprite-logo-desktop"></use>
+          </svg>
+        </a>
+        <button class="header__toggle-button btn" data-button="toggle-button" type="button" aria-label="Меню">Меню</button>
+        <ul class="header__menu" data-list="menu-list">
+          <li class="header__menu-item">
+            <a href="#">О проекте</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Программы</a>
+            <ul class="header__submenu">
+              <li class="header__submenu-item">
+                <a href="#">Стажировки</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#">Волонтерство</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#">Учёба</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#">Религия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Как поехать</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Отзывы</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Новости</a>
+            <ul class="header__submenu">
+              <li class="header__submenu-item">
+                <a href="#">Общее</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#">Волонтерство</a>
+              </li>
+              <li class="header__submenu-item">
+                <a href="#">Стажировки</a>
+              </li>
+
+              <li class="header__submenu-item">
+                <a href="#">Карьера</a>
+              </li>
+
+              <li class="header__submenu-item">
+                <a href="#">Путешествия</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header__menu-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <section class="header__hero hero">
+        <h1 class="visually-hidden">Организация стажировок, волонтерства и обучения за рубежом</h1>
+        <div class="swiper" data-slider="hero">
+          <ul class="hero__items swiper-wrapper">
+            <li class="hero__item swiper-slide">
+              <div class="hero__background">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/hero1_mobile1x.webp 1x, ./img/hero1_mobile2x.webp 2x" width="320" height="568">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="./img/hero1_tablet1x.webp 1x, ./img/hero1_tablet2x.webp 2x" width="768" height="1024">
+                  <source type="image/webp" srcset="./img/hero1_desktop1x.webp 1x, ./img/hero1_desktop2x.webp 2x" width="1440" height="800">
+                  <source type="image/png" media="(max-width: 767px)" srcset="img/hero1_mobile1x.png 1x, img/hero1_mobile2x.png 2x" width="320" height="568">
+                  <source type="image/png" media="(max-width: 1439px)" srcset="img/hero1_tablet1x.png 1x, img/hero1_tablet2x.png 2x" width="768" height="1024">
+                  <img src="./img/hero1_desktop1x.png" srcset="./img/hero1_desktop2x.png 2x" width="1440" height="800" alt="Программа 1.">
+                </picture>
+              </div>
+              <div class="hero__content container">
+                <div class="swiper-pagination"></div>
+                <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                <p>Погрузитесь в&nbsp;академическую программу, проходя практику в&nbsp;разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                <a class="hero__button btn btn--primary" href="#">Подробнее
+                  <svg width="8" height="8" viewBox="0 0 8 8" role="img">
+                    <use href="__spritemap#sprite-button-arrow"></use>
+                  </svg>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+  </div>
   <div data-test="about">about</div>
   <div data-test="programs">programs</div>
   <div data-test="grant">grant</div>
@@ -22,5 +119,4 @@
   <div data-test="footer">footer</div>
   <script type="module" src="js/main.js"></script>
 </body>
-
 </html>

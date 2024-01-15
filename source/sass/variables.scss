@@ -1,0 +1,44 @@
+// Colors
+// ---------------------------------
+
+// Default
+
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
+$color-grey: #a9afb7;
+
+// Project palette
+// для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+
+$color-dark: #484848;
+$color-light: #f0efe9;
+$color-accent: #316dc2;
+$color-accent-dark: #275699;
+$color-error: #ff5e66;
+$color-overlay-light: rgba($color-accent, 0.2);
+$color-overlay-dark: rgba(#0d1d33, 0.4);
+
+// Typography
+// ---------------------------------
+
+$ff-manrope: "Manrope", "Arial", sans-serif;
+$ff-light: 300;
+$ff-normal: 400;
+$ff-medium: 500;
+
+// Animation
+// ---------------------------------
+
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-600: 0.6s $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$vp-320: 320px;
+$vp-768: 768px;
+$vp-1440: 1440px;
+
