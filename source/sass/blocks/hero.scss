@@ -1,12 +1,16 @@
 .hero__background {
   width: 100vw;
   height: 100%;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 
   &::before {
     content: "";
     width: 100%;
     height: 100%;
+    min-height: 800px;
     background-color: rgba($color-accent, 0.2);
     position: absolute;
     top: 0;
@@ -19,4 +23,108 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  height: 100%;
+}
+
+.hero__item {
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+.hero__wrapper {
+  display: flex;
+  margin-top: -7px;
+}
+
+.hero__content h2 {
+  @include text(54px, 62px);
+  color: $color-accent;
+  background-color: $color-default-white;
+  max-width: 968px;
+  border-radius: 0 30px 30px 0;
+  padding: 40px 50px 30px;
+  margin: 0;
+}
+
+.hero__content p {
+  @include text(16px, 26px);
+  color: $color-dark;
+  background-color: $color-default-white;
+  max-width: 526px;
+  border-radius: 0 0 0 30px;
+  padding: 0 30px 28px 50px;
+  margin: 0;
+}
+
+.hero__button-wrapper {
+  background-color: $color-default-white;
+  padding: 12px 50px 40px 0;
+  border-radius: 0 0 30px 0;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-image: url("../../img/svg/angle.svg");
+    position: absolute;
+    top: 7px;
+    left: 100%;
+  }
+}
+
+.hero__pagination {
+  padding: 20px 14px;
+  background-color: $color-default-white;
+  border-radius: 20px 20px 0 0;
+}
+
+.hero__pagination .swiper-pagination {
+  display: flex;
+  gap: 12px;
+}
+
+.hero__pagination .swiper-pagination .swiper-pagination-bullet {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid $color-accent;
+  background-color: $color-transparent;
+  padding: 0;
+  flex-shrink: 0;
+  opacity: 1;
+  margin: 0;
+  position: relative;
+
+  @include vp-767 {
+    width: 8px;
+    height: 8px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: rgba($color-default-white, 0.5);
+  }
+
+  &:focus::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: $color-transparent;
+    border: 1px solid rgba($color-default-white, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.hero__pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $color-accent;
 }
