@@ -11,6 +11,33 @@
   clip-path: inset(100%);
 }
 
+.wrapper {
+  position: relative;
+  height: 100dvh;
+}
+
+.wrapper.is-open {
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: $color-overlay-dark;
+  z-index: $index-menu-overlay;
+  display: none;
+}
+
+.overlay.is-open {
+  display: block;
+}
+
 .scroll-lock-ios {
   position: fixed;
   overflow: hidden;

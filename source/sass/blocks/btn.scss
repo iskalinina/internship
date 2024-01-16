@@ -1,0 +1,52 @@
+.btn {
+  display: inline-flex;
+  width: min-content;
+  color: $color-accent;
+  border: none;
+  cursor: pointer;
+  transition: all $trans-default;
+  user-select: none;
+
+  &:disabled {
+    pointer-events: none;
+  }
+
+  &--primary {
+    @include text(14px, 14px, $ff-medium);
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    background-color: $color-transparent;
+    border: 1px solid $color-accent;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--small {
+    padding: 3px 3px 3px 19px;
+  }
+
+  &--normal {
+    padding: 3px 3px 3px 29px;
+  }
+}
+
+.btn span {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: $color-accent;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn--small span {
+  margin-left: 20px;
+}
+
+.btn--normal span {
+  margin-left: 30px;
+}

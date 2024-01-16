@@ -1,0 +1,22 @@
+.hero__background {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-accent, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $index-hero-overlay;
+  }
+}
+
+.hero__items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
