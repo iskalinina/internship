@@ -5,6 +5,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import './menu/toggler.js';
 import {initAccordions} from './accordeon/init-accordion.js';
+import {initSliderHero} from './sliders/hero-slider.js';
 
 // ---------------------------------
 
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   initAccordions();
+  initSliderHero();
 
   // Modules
   // ---------------------------------

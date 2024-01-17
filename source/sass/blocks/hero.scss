@@ -1,3 +1,6 @@
+.hero {
+  position: relative;
+}
 .hero__background {
   width: 100vw;
   height: 100%;
@@ -5,6 +8,7 @@
   top: 0;
   left: 0;
   z-index: -1;
+  background-color: $color-grey;
 
   &::before {
     content: "";
@@ -19,25 +23,33 @@
   }
 }
 
+.hero__background img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .hero__items {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  height: 100%;
 }
 
 .hero__item {
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding-top: 30px;
+  //justify-content: flex-end;
   padding-bottom: 60px;
 }
 
 .hero__wrapper {
   display: flex;
   margin-top: -7px;
+}
+
+.hero__content {
+  margin-top: 447px;
 }
 
 .hero__content h2 {
@@ -81,6 +93,21 @@
   padding: 20px 14px;
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
+  width: min-content;
+  z-index: 20;
+  position: absolute;
+  top: 409px;
+  left: 100px;
+
+  &::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("../../img/svg/angle-pagination.svg");
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+  }
 }
 
 .hero__pagination .swiper-pagination {
@@ -128,3 +155,13 @@
 .hero__pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: $color-accent;
 }
+
+.hero__pagination {
+  padding: 14px 20px;
+  z-index: $index-hero-pagination;
+  background-color: $color-default-white;
+  position: absolute;
+  top: 409px;
+  left: 100px;
+}
+
