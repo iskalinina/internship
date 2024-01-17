@@ -11,7 +11,7 @@
     pointer-events: none;
   }
 
-  &--primary {
+  &--light {
     @include text(14px, 14px, $ff-medium);
     letter-spacing: 0.28px;
     text-transform: uppercase;
@@ -21,6 +21,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &:hover,
+    &:focus {
+      background-color: $color-accent;
+      color: $color-default-white;
+    }
+
+    &:active {
+      background-color: $color-accent;
+      color: rgba($color-default-white, 0.7);
+    }
+
+    &:hover span,
+    &:focus span {
+      background-color: $color-default-white;
+      color: $color-accent;
+    }
+
+    &:active span {
+      background-color: $color-default-white;
+      color: $color-accent;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      border-color: #A9AFB7;
+      color: #A9AFB7;
+    }
+
+    &:disabled span {
+      background-color: #A9AFB7;
+      color: $color-default-white;
+    }
   }
 
   &--small {
@@ -36,6 +69,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
+  color: $color-default-white;
   background-color: $color-accent;
   z-index: 2;
   display: flex;
@@ -49,4 +83,15 @@
 
 .btn--normal span {
   margin-left: 30px;
+}
+
+.btn--light.is-disable {
+  background-color: transparent;
+  border-color: #A9AFB7;
+  color: #A9AFB7;
+}
+
+.btn--light.is-disable span {
+  background-color: #A9AFB7;
+  color: $color-default-white;
 }

@@ -21,7 +21,7 @@
   margin: 0;
 }
 .header__menu {
-  min-width: 290px;
+  min-width: 286px;
   padding: 35px 25px;
   border-radius: 16px;
   background-color: $color-accent;
@@ -29,6 +29,10 @@
   top: 88px;
   right: 100px;
   display: none;
+
+  @include vp-767 {
+    min-width: 290px;
+  }
 }
 
 .header__menu.is-open {
@@ -112,22 +116,32 @@
 
 .header__toggle-button {
   background-color: $color-default-white;
+  color: $color-accent;
 }
 
 .header__toggle-button span {
-  background-color: $color-accent;
   background-image: url("../../img/menu-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.header__toggle-button:hover span,
+.header__toggle-button:focus span {
+  stroke: $color-accent;
+}
+
 .header__toggle-button.is-open {
   background-color: $color-accent;
   color: $color-default-white;
-  width: 290px;
+  min-width: 286px;
+
+  @include vp-767 {
+    min-width: 290px;
+  }
 }
 
 .header__toggle-button.is-open span {
   background-color: $color-default-white;
   background-image: url("../../img/menu-close.svg");
+
 }

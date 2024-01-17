@@ -89,6 +89,13 @@
   }
 }
 
+.hero__button:hover svg,
+.hero__button:focus svg,
+.hero__button:active svg {
+  color: $color-accent;
+  transform: rotate(45deg);
+}
+
 .hero__pagination {
   padding: 20px 14px;
   background-color: $color-default-white;
