@@ -1,6 +1,15 @@
 .header {
   margin-bottom: 120px;
+
+  @include vp-1439 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 60px;
+  }
 }
+
 .header__nav {
   padding-top: 30px;
   display: flex;
@@ -117,12 +126,16 @@
 .header__toggle-button {
   background-color: $color-default-white;
   color: $color-accent;
+  padding: 3px 3px 3px 19px;
 }
 
 .header__toggle-button span {
   background-image: url("../../img/menu-burger.svg");
   background-repeat: no-repeat;
   background-position: center;
+  width: 46px;
+  height: 46px;
+  margin-left: 20px;
 }
 
 .header__toggle-button:hover span,
@@ -143,5 +156,4 @@
 .header__toggle-button.is-open span {
   background-color: $color-default-white;
   background-image: url("../../img/menu-close.svg");
-
 }

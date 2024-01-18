@@ -20,6 +20,14 @@
     top: 0;
     left: 0;
     z-index: $index-hero-overlay;
+
+    @include vp-1439 {
+      min-height: 1024px;
+    }
+
+    @include vp-767 {
+      min-height: 568px;
+    }
   }
 }
 
@@ -39,17 +47,42 @@
   min-height: 800px;
   display: flex;
   flex-direction: column;
-  //justify-content: flex-end;
   padding-bottom: 60px;
+
+  @include vp-1439 {
+    min-height: 1024px;
+  }
+
+  @include vp-767 {
+    min-height: 568px;
+    padding-bottom: 20px;
+  }
 }
 
 .hero__wrapper {
   display: flex;
   margin-top: -7px;
+
+  @include vp-1439 {
+    margin-top: -4px;
+  }
+
+  @include vp-767 {
+    margin-top: -5px;
+    flex-direction: column;
+  }
 }
 
 .hero__content {
   margin-top: 447px;
+
+  @include vp-1439 {
+    margin-top: 691px;
+  }
+
+  @include vp-767 {
+    margin-top: 241px;
+  }
 }
 
 .hero__content h2 {
@@ -60,6 +93,19 @@
   border-radius: 0 30px 30px 0;
   padding: 40px 50px 30px;
   margin: 0;
+
+  @include vp-1439 {
+    @include text(36px, 44px);
+    max-width: 659px;
+    padding: 30px 40px 24px;
+  }
+
+  @include vp-767 {
+    @include text(22px, 26px);
+    max-width: 290px;
+    padding: 20px 14px 16px;
+    border-radius: 0 16px 16px 0;
+  }
 }
 
 .hero__content p {
@@ -70,6 +116,19 @@
   border-radius: 0 0 0 30px;
   padding: 0 30px 28px 50px;
   margin: 0;
+
+  @include vp-1439 {
+    @include text(16px, 20px);
+    max-width: 355px;
+    padding: 0 30px 35px 40px;
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+    max-width: 267px;
+    padding: 0 14px 10px;
+    border-radius: 0 0 14px 0;
+  }
 }
 
 .hero__button-wrapper {
@@ -77,15 +136,44 @@
   padding: 12px 50px 40px 0;
   border-radius: 0 0 30px 0;
   position: relative;
+  width: min-content;
 
-  &:after {
+  &::after {
     content: "";
     width: 26px;
     height: 26px;
     background-image: url("../../img/svg/angle.svg");
+    background-size: cover;
     position: absolute;
     top: 7px;
     left: 100%;
+  }
+
+   @include vp-1439 {
+     padding: 4px 40px 40px 0;
+
+     &::after {
+       top: 4px;
+     }
+   }
+
+  @include vp-767 {
+    padding: 10px 15px;
+    border-radius: 0 0 14px 14px;
+
+    &::after {
+      top: 0;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.hero__button {
+  @include vp-767 {
+    @include text(12px, 12px, $ff-medium);
+    letter-spacing: 0.24px;
+    padding: 3px 3px 3px 19px;
   }
 }
 
@@ -97,14 +185,14 @@
 }
 
 .hero__pagination {
-  padding: 20px 14px;
+  padding: 14px 20px;
   background-color: $color-default-white;
   border-radius: 20px 20px 0 0;
   width: min-content;
-  z-index: 20;
   position: absolute;
   top: 409px;
   left: 100px;
+  z-index: $index-hero-pagination;
 
   &::after {
     content: "";
@@ -114,6 +202,23 @@
     position: absolute;
     bottom: 0;
     left: 100%;
+  }
+
+  @include vp-1439 {
+    top: 653px;
+    left: 45px;
+  }
+
+  @include vp-767 {
+    top: 213px;
+    left: 15px;
+    padding: 10px 16px;
+    border-radius: 12px 12px 0 0;
+
+    &::after {
+      width: 10px;
+      height: 10px;
+    }
   }
 }
 
@@ -162,13 +267,3 @@
 .hero__pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: $color-accent;
 }
-
-.hero__pagination {
-  padding: 14px 20px;
-  z-index: $index-hero-pagination;
-  background-color: $color-default-white;
-  position: absolute;
-  top: 409px;
-  left: 100px;
-}
-
