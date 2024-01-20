@@ -8,6 +8,10 @@
   transition: all $trans-default;
   user-select: none;
 
+  @include vp-767 {
+    @include text(12px, 12px);
+  }
+
   &:disabled {
     pointer-events: none;
   }
@@ -53,6 +57,10 @@
     &:disabled span {
       background-color: #A9AFB7;
       color: $color-default-white;
+    }
+
+    @include vp-767 {
+      padding: 3px 3px 3px 19px;
     }
   }
 
