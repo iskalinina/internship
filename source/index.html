@@ -213,7 +213,129 @@
           </li>
         </ul>
       </section>
-      <div data-test="programs">programs</div>
+      <section class="programs container" data-test="programs">
+        <div class="programs__header">
+          <h2>Программы</h2>
+          <a class="programs__button btn btn--light btn--normal" href="#">Все программы
+            <span>
+              <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                <use href="__spritemap#sprite-button-arrow"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+        <div class="swiper" data-slider="programs">
+          <ul class="programs__items swiper-wrapper">
+            <li class="programs__item swiper-slide">
+              <div class="programs__background">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/prog1_mobile1x.webp 1x, ./img/prog1_mobile2x.webp 2x" width="290" height="400">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="./img/prog1_tablet1x.webp 1x, ./img/prog1_tablet2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/prog1_desktop1x.webp 1x, ./img/prog1_desktop2x.webp 2x" width="392" height="420">
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/prog1_mobile1x.jpg 1x, img/prog1_mobile2x.jpg 2x" width="290" height="400">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/prog1_tablet1x.jpg 1x, img/prog1_tablet2x.jpg 2x" width="324" height="420">
+                  <img src="./img/prog1_desktop1x.jpg" srcset="./img/prog1_desktop2x.jpg 2x" width="392" height="420" alt="Стажировки.">
+                </picture>
+              </div>
+              <div class="programs__content">
+                <h3>Стажировки</h3>
+                <div class="programs__content-footer">
+                  <p>Получите незаменимый опыт работы в&nbsp;крупнейших мировых компаниях.</p>
+                  <a class="programs__item-button btn btn--icon" href="#">
+                    <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                      <use href="__spritemap#sprite-button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <div class="programs__background">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/prog2_mobile1x.webp 1x, ./img/prog2_mobile2x.webp 2x" width="290" height="400">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="./img/prog2_tablet1x.webp 1x, ./img/prog2_tablet2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/prog2_desktop1x.webp 1x, ./img/prog2_desktop2x.webp 2x" width="392" height="420">
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/prog2_mobile1x.jpg 1x, img/prog2_mobile2x.jpg 2x" width="290" height="400">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/prog2_tablet1x.jpg 1x, img/prog2_tablet2x.jpg 2x" width="324" height="420">
+                  <img src="./img/prog2_desktop1x.jpg" srcset="./img/prog2_desktop2x.jpg 2x" width="392" height="420" alt="Волонтерство.">
+                </picture>
+              </div>
+              <div class="programs__content">
+                <h3>Волонтёрство</h3>
+                <div class="programs__content-footer">
+                  <p>Помогайте другим и&nbsp;развивайте свои лидерские качества.</p>
+                  <a class="programs__item-button btn btn--icon" href="#">
+                    <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                      <use href="__spritemap#sprite-button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <div class="programs__background">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/prog3_mobile1x.webp 1x, ./img/prog3_mobile2x.webp 2x" width="290" height="400">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="./img/prog3_tablet1x.webp 1x, ./img/prog3_tablet2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/prog3_desktop1x.webp 1x, ./img/prog3_desktop2x.webp 2x" width="392" height="420">
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/prog3_mobile1x.jpg 1x, img/prog3_mobile2x.jpg 2x" width="290" height="400">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/prog3_tablet1x.jpg 1x, img/prog3_tablet2x.jpg 2x" width="324" height="420">
+                  <img src="./img/prog3_desktop1x.jpg" srcset="./img/prog3_desktop2x.jpg 2x" width="392" height="420" alt="Учёба.">
+                </picture>
+              </div>
+              <div class="programs__content">
+                <h3>Учёба</h3>
+                <div class="programs__content-footer">
+                  <p>Получите образование и&nbsp;измените своё будущее.</p>
+                  <a class="programs__item-button btn btn--icon" href="#">
+                    <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                      <use href="__spritemap#sprite-button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="programs__item swiper-slide">
+              <div class="programs__background">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/prog3_mobile1x.webp 1x, ./img/prog3_mobile2x.webp 2x" width="290" height="400">
+                  <source type="image/webp" media="(max-width: 1439px)" srcset="./img/prog3_tablet1x.webp 1x, ./img/prog3_tablet2x.webp 2x" width="324" height="420">
+                  <source type="image/webp" srcset="./img/prog3_desktop1x.webp 1x, ./img/prog3_desktop2x.webp 2x" width="392" height="420">
+                  <source type="image/jpg" media="(max-width: 767px)" srcset="img/prog3_mobile1x.jpg 1x, img/prog3_mobile2x.jpg 2x" width="290" height="400">
+                  <source type="image/jpg" media="(max-width: 1439px)" srcset="img/prog3_tablet1x.jpg 1x, img/prog3_tablet2x.jpg 2x" width="324" height="420">
+                  <img src="./img/prog3_desktop1x.jpg" srcset="./img/prog3_desktop2x.jpg 2x" width="392" height="420" alt="Учёба.">
+                </picture>
+              </div>
+              <div class="programs__content">
+                <h3>Название</h3>
+                <div class="programs__content-footer">
+                  <p>Короткое описание в две или три строки.</p>
+                  <a class="programs__item-button btn btn--icon" href="#">
+                    <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                      <use href="__spritemap#sprite-button-arrow"></use>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="programs__footer">
+          <div class="swiper-scrollbar" data-swiper="programs-scrollbar"></div>
+          <div class="programs__navigation">
+            <button class="programs__button-nav programs__button-nav--prev btn btn--arrow" type="button" data-button="programs-prev">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img">
+                <use href="__spritemap#sprite-arrow"></use>
+              </svg>
+            </button>
+            <button class="programs__button-nav programs__button-nav--next btn btn--arrow" type="button" data-button="programs-next">
+              <svg width="10" height="10" viewBox="0 0 10 10" role="img">
+                <use href="__spritemap#sprite-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
       <div data-test="grant">grant</div>
       <div data-test="news">news</div>
       <div data-test="FAQ">FAQ</div>

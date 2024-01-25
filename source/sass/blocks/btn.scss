@@ -16,6 +16,24 @@
     pointer-events: none;
   }
 
+  &--arrow {
+    width: 22px;
+    height: 22px;
+    padding: 6px;
+    background-color: $color-transparent;
+  }
+
+  &--icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $color-accent;
+    color: $color-default-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &--light {
     letter-spacing: 0.28px;
     text-transform: uppercase;
@@ -74,6 +92,7 @@
 }
 
 .btn span {
+  flex-shrink: 0;
   width: 46px;
   height: 46px;
   border-radius: 50%;
