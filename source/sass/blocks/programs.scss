@@ -6,6 +6,11 @@
   @include text(50px, 50px);
   color: $color-accent;
   margin: 4px 0 0;
+
+  @include vp-1439 {
+    @include text(34px, 50px);
+    margin-top: 1px;
+  }
 }
 
 .programs__header {
@@ -25,6 +30,7 @@
 }
 
 .programs__item {
+  overflow: hidden;
   border-radius: 12px;
   width: calc((100% - 64px) / 3);
   min-height: 420px;
@@ -49,12 +55,17 @@
   height: 100%;
 }
 
+.programs__content {
+  margin-top: 260px;
+}
+
 .programs__content h3 {
   @include text(24px, 26px);
   width: min-content;
+  min-width: 194px;
   color: $color-accent;
   background-color: $color-default-white;
-  padding: 13px 37px 2px 18px;
+  padding: 13px 12px 2px 18px;
   margin: 0;
   border-radius: 12px 12px 0 0;
   position: relative;
@@ -68,11 +79,16 @@
     bottom: 0;
     left: 100%;
   }
+
+  @include vp-1439 {
+    //@include text(34px, 50px);
+  }
 }
 
 .programs__content-footer {
   background-color: $color-default-white;
   padding: 10px 18px 15px;
+  height: 79px;
   border-radius: 0 12px 12px 12px;
   max-width: 321px;
   display: flex;
