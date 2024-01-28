@@ -12,9 +12,9 @@ const setSliderPrograms = () => {
     scrollbar: {
       el: scrollbar,
       draggable: true,
-      dragSize: 392,
       hide: false
     },
+    slidesPerView: 'auto',
     navigation: {
       nextEl: buttonNext,
       prevEl: buttonPrev,
@@ -27,14 +27,10 @@ const setSliderPrograms = () => {
         allowTouchMove: false,
       },
       768: {
-        spaceBetween: 30,
         slidesPerView: 'auto',
-        scrollbar: {
-          dragSize: 324,
-        },
+        spaceBetween: 30,
       },
       320: {
-        slidesPerView: 1,
         spaceBetween: 15,
         scrollbar: {
           el: '',
