@@ -27,7 +27,7 @@ const setSliderPrograms = () => {
         allowTouchMove: false,
       },
       768: {
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 30,
       },
       320: {

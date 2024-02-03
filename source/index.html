@@ -14,7 +14,7 @@
   <link rel="preload" href="fonts/manrope-v15-cyrillic_cyrillic-ext_latin_latin-ext-500.woff2" as="font" crossorigin="anonymous">
 </head>
 <body>
-  <section class="wrapper">
+  <div class="wrapper">
     <div data-test="slider">
       <header class="header">
         <nav class="header__nav container" data-menu="menu">
@@ -369,7 +369,156 @@
           </ul>
         </div>
       </section>
-      <div data-test="news">news</div>
+      <section class="news" data-test="news">
+        <div class="container">
+          <h2>Новости и материалы</h2>
+          <div class="news__nav swiper" data-slider="news-nav">
+            <ul class="news__nav-list swiper-wrapper">
+              <li class="swiper-slide">
+                <a class="news__nav-item is-active" href="#">Общее</a>
+              </li>
+              <li class="swiper-slide">
+                <a class="news__nav-item" href="#">Волонтёрство</a>
+              </li>
+              <li class="swiper-slide">
+                <a class="news__nav-item" href="#">Стажировки</a>
+              </li>
+              <li class="swiper-slide">
+                <a class="news__nav-item" href="#">Карьера</a>
+              </li>
+              <li class="swiper-slide">
+                <a class="news__nav-item" href="#">Путешествия</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="news__container container">
+          <div class="swiper" data-slider="news">
+            <ul class="news__list swiper-wrapper">
+              <li class="news__item swiper-slide">
+                <div class="news__item-background">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/news1_mobile1x.webp 1x, ./img/news1_mobile2x.webp 2x" width="290" height="330">
+                    <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news1_tablet1x.webp 1x, ./img/news1_tablet2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news1_desktop1x.webp 1x, ./img/news1_desktop2x.webp 2x" width="604" height="400">
+                    <source type="image/jpg" media="(max-width: 767px)" srcset="img/news1_mobile1x.jpg 1x, img/news1_mobile2x.jpg 2x" width="290" height="330">
+                    <source type="image/jpg" media="(max-width: 1439px)" srcset="img/news1_tablet1x.jpg 1x, img/news1_tablet2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news1_desktop1x.jpg" srcset="./img/news1_desktop2x.jpg 2x" width="604" height="400" alt="Интервью с участницей программы стажировки.">
+                  </picture>
+                </div>
+                <div class="news__item-content">
+                  <span>23/03/2023</span>
+                  <h3>Интервью с&nbsp;участницей программы стажировки</h3>
+                  <div class="news__item-footer">
+                    <p>Саша рассказывает, как&nbsp;попала в&nbsp;программу и&nbsp;как&nbsp;прошла 6- месячная стажировка в&nbsp;ISOFound</p>
+                    <a class="news__item-button btn btn--icon" href="#">
+                      <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                        <use href="__spritemap#sprite-button-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide">
+                <div class="news__item-background">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/news2_mobile1x.webp 1x, ./img/news2_mobile2x.webp 2x" width="290" height="240">
+                    <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news2_tablet1x.webp 1x, ./img/news2_tablet2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news2_desktop1x.webp 1x, ./img/news2_desktop2x.webp 2x" width="286" height="400">
+                    <source type="image/jpg" media="(max-width: 767px)" srcset="img/news2_mobile1x.jpg 1x, img/news2_mobile2x.jpg 2x" width="290" height="240">
+                    <source type="image/jpg" media="(max-width: 1439px)" srcset="img/news2_tablet1x.jpg 1x, img/news2_tablet2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news2_desktop1x.jpg" srcset="./img/news2_desktop2x.jpg 2x" width=286 height="400" alt="Какие места посещают наши студенты весной.">
+                  </picture>
+                </div>
+                <div class="news__item-content">
+                  <span>20/03/2023</span>
+                  <h3>Путешествуем по&nbsp;миру</h3>
+                  <div class="news__item-footer">
+                    <p>Какие места посещают наши студенты весной</p>
+                    <a class="news__item-button btn btn--icon" href="#">
+                      <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                        <use href="__spritemap#sprite-button-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide">
+                <div class="news__item-background">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/news3_mobile1x.webp 1x, ./img/news3_mobile2x.webp 2x" width="290" height="240">
+                    <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news3_tablet1x.webp 1x, ./img/news3_tablet2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news3_desktop1x.webp 1x, ./img/news3_desktop2x.webp 2x" width="286" height="400">
+                    <source type="image/jpg" media="(max-width: 767px)" srcset="img/news3_mobile1x.jpg 1x, img/news3_mobile2x.jpg 2x" width="290" height="240">
+                    <source type="image/jpg" media="(max-width: 1439px)" srcset="img/news3_tablet1x.jpg 1x, img/news3_tablet2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news3_desktop1x.jpg" srcset="./img/news3_desktop2x.jpg 2x" width=286 height="400" alt="Новая программа волонтёрства.">
+                  </picture>
+                </div>
+                <div class="news__item-content">
+                  <span>17/03/2023</span>
+                  <h3>Новая программа волонтёрства</h3>
+                  <div class="news__item-footer">
+                    <p>Программа помощи детям длительностью 4&nbsp;месяца</p>
+                    <a class="news__item-button btn btn--icon" href="#">
+                      <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                        <use href="__spritemap#sprite-button-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="news__item swiper-slide">
+                <div class="news__item-background">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/news4_mobile1x.webp 1x, ./img/news4_mobile2x.webp 2x" width="290" height="240">
+                    <source type="image/webp" media="(max-width: 1439px)" srcset="./img/news4_tablet1x.webp 1x, ./img/news4_tablet2x.webp 2x" width="324" height="350">
+                    <source type="image/webp" srcset="./img/news4_desktop1x.webp 1x, ./img/news4_desktop2x.webp 2x" width="286" height="400">
+                    <source type="image/jpg" media="(max-width: 767px)" srcset="img/news4_mobile1x.jpg 1x, img/news4_mobile2x.jpg 2x" width="290" height="240">
+                    <source type="image/jpg" media="(max-width: 1439px)" srcset="img/news4_tablet1x.jpg 1x, img/news4_tablet2x.jpg 2x" width="324" height="350">
+                    <img src="./img/news4_desktop1x.jpg" srcset="./img/news4_desktop2x.jpg 2x" width=286 height="400" alt="Построй свою карьеру.">
+                  </picture>
+                </div>
+                <div class="news__item-content">
+                  <span>10/03/2023</span>
+                  <h3>Построй свою карьеру</h3>
+                  <div class="news__item-footer">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a class="news__item-button btn btn--icon" href="#">
+                      <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                        <use href="__spritemap#sprite-button-arrow"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container">
+          <div class="news__footer">
+            <div class="news__pagination">
+              <div class="swiper-pagination" data-pagination="news-pagination">
+                <button class="news__pagination-button is-active" type="button" aria-label="1 слайд"></button>
+                <button class="news__pagination-button" type="button" aria-label="2 слайд"></button>
+                <button class="news__pagination-button" type="button" aria-label="3 слайд"></button>
+                <button class="news__pagination-button" type="button" aria-label="4 слайд"></button>
+              </div>
+            </div>
+            <div class="news__navigation">
+              <button class="news__button-nav news__button-nav--prev btn btn--arrow" type="button" data-button="news-prev">
+                <svg width="10" height="10" viewBox="0 0 10 10" role="img">
+                  <use href="__spritemap#sprite-arrow"></use>
+                </svg>
+              </button>
+              <button class="news__button-nav news__button-nav--next btn btn--arrow" type="button" data-button="news-next">
+                <svg width="10" height="10" viewBox="0 0 10 10" role="img">
+                  <use href="__spritemap#sprite-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <div data-test="FAQ">FAQ</div>
       <div data-test="reviews">reviews</div>
       <div data-test="contacts">contacts</div>

@@ -11,7 +11,7 @@
     margin-bottom: 100px;
     flex-direction: column;
     gap: 40px;
-    padding-top: 100px;
+    padding-top: 98px;
     padding-bottom: 100px;
   }
 
@@ -32,14 +32,14 @@
   @include vp-1439 {
     @include text(34px, 50px);
 
-    padding: 12px 0 14px;
+    padding: 0 0 11px;
   }
 
   @include vp-767 {
     @include text(20px, 20px);
 
-    padding: 5px 0 6px;
-    margin-bottom: 15px;
+    padding: 1px 0 0;
+    margin-bottom: 14px;
   }
 }
 
@@ -51,13 +51,15 @@
 
   @include vp-1439 {
     @include text(16px, 20px);
+
+    margin-bottom: 36px;
   }
 
   @include vp-767 {
     @include text(14px, 20px);
 
     max-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -68,6 +70,10 @@
 
   @include vp-1439 {
     max-width: 100%;
+  }
+
+  @include vp-1439 {
+    min-width: 100%;
   }
 }
 
@@ -82,12 +88,14 @@
     @include text(28px, 28px);
 
     margin-bottom: 35px;
+    padding: 5px 0 7px;
+    max-width: 100%;
   }
 
   @include vp-767 {
     @include text(18px, 22px);
 
-    margin-bottom: 20px;
+    margin-bottom: 19px;
     max-width: 210px;
   }
 }
@@ -103,10 +111,15 @@
 
   @include vp-1439 {
     flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+    padding-right: 0;
   }
 
   @include vp-767 {
     flex-direction: column;
+    padding-left: 15px;
+    gap: 15px;
   }
 }
 
@@ -115,6 +128,18 @@
   border: 1px solid $color-default-white;
   border-radius: 16px;
   min-width: 478px;
+
+  @include vp-1439 {
+    width: calc((100% - 48px) / 2);
+    min-width: auto;
+    max-width: 305px;
+    min-height: 92px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 58px;
+  }
 }
 
 .grant__list-item p {
@@ -123,10 +148,22 @@
   padding: 22px 25px 22px;
   max-width: 428px;
   margin: 0;
+
+  @include vp-1439 {
+    @include text(16px, 20px);
+
+    padding: 25px 24px 25px 25px;
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+
+    padding: 18px 24px;
+  }
 }
 
 .grant__list-item span {
-  @include text(22px, 22px);
+  @include text(22px, 22px, $ff-medium);
 
   letter-spacing: 0.22px;
   text-transform: uppercase;
@@ -139,5 +176,19 @@
   position: absolute;
   top: -16px;
   left: -20px;
+
+  @include vp-1439 {
+    left: -21px;
+  }
+
+  @include vp-767 {
+    @include text(18px, 18px, $ff-medium);
+
+    width: 32px;
+    height: 32px;
+    padding: 10px 4px;
+    top: -9px;
+    left: -16px;
+  }
 }
 
