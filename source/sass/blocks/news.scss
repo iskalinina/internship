@@ -11,7 +11,10 @@
 }
 
 .news .container:first-child {
-  padding: 0 0 0 15px;
+
+  @include vp-767 {
+    padding: 0 0 0 15px;
+  }
 }
 
 .news h2 {
@@ -19,7 +22,7 @@
 
   color: $color-accent;
   padding: 4px 0 12px;
-  margin: 0 0 30px;
+  margin: 0 0 34px;
   text-align: center;
 
   @include vp-1439 {
@@ -313,11 +316,8 @@
 
   @include vp-767 {
     max-width: 263px;
+    padding-top: 13px;
   }
-}
-
-.news__item:first-child .news__item-footer {
-  padding-top: 13px;
 }
 
 .news__item:first-child .news__item-footer p {
@@ -404,5 +404,13 @@
 .news__button-nav {
   &--next {
     transform: rotate(180deg);
+  }
+}
+
+.news__br {
+  display: none;
+
+  @include vp-767 {
+    display: block;
   }
 }

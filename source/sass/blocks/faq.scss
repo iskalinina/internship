@@ -1,0 +1,214 @@
+.faq {
+  margin-bottom: 124px;
+
+  @include vp-1439 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 60px;
+  }
+}
+
+.faq h2 {
+  @include text(50px, 50px);
+
+  color: $color-accent;
+  padding: 3px 0 0;
+  margin: 0 0 67px;
+  text-align: center;
+
+  @include vp-1439 {
+    @include text(34px, 50px);
+
+    padding: 0;
+    margin-bottom: 41px;
+    margin-top: -1px;
+  }
+
+  @include vp-767 {
+    @include text(20px, 20px);
+
+    padding: 2px 0 6px;
+    margin-right: 0;
+    margin-bottom: 27px;
+    margin-top: 0;
+  }
+}
+
+.faq__wrapper {
+  padding: 0 106px;
+
+  @include vp-1439 {
+    padding: 0;
+  }
+}
+
+.faq__element {
+  border: 1px solid $color-accent;
+  border-radius: 16px;
+  min-height: 120px;
+  padding: 39px;
+
+  @include vp-1439 {
+    min-height: 100px;
+    padding: 29px;
+  }
+
+  @include vp-767 {
+    min-height: 80px;
+    border-radius: 14px;
+    padding: 15px 14px 21px;
+  }
+
+  &--big {
+    padding: 39px 39px 33px 39px;
+
+    @include vp-1439 {
+      padding: 31px 29px 25px 29px;
+    }
+
+    @include vp-767 {
+      padding: 27px 14px 19px;
+    }
+  }
+}
+
+.faq__element.is-active {
+  background-color: $color-accent;
+  color: $color-default-white;
+  padding-bottom: 32px;
+
+  @include vp-1439 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 15px;
+  }
+}
+
+.faq__element:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.faq__button {
+  @include text(28px, 28px);
+
+  color: $color-accent;
+  display: flex;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background-color: $color-accent;
+      border-radius: 50%;
+      background-image: url("../../img/svg/plus.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include vp-767 {
+        top: 4px;
+      }
+    }
+
+  @include vp-1439 {
+    @include text(22px, 26px);
+  }
+
+  @include vp-767 {
+    @include text(16px, 18px);
+  }
+}
+
+.faq__element--big .faq__button::after {
+  @include vp-1439 {
+    top: -2px;
+  }
+
+  @include vp-767 {
+    top: -1px;
+  }
+}
+
+.faq__element--big:last-child .faq__button::after {
+  @include vp-767 {
+    top: 8px;
+  }
+}
+
+.faq__element--big .faq__button {
+  line-height: 34px;
+
+  @include vp-1439 {
+    line-height: 28px;
+  }
+}
+
+.faq__button p {
+  margin: 0;
+  padding: 6px 0 0;
+  max-width: 600px;
+  text-align: start;
+
+  @include vp-1439 {
+    max-width: 590px;
+  }
+
+  @include vp-767 {
+    max-width: 187px;
+  }
+}
+
+.faq__element.is-active .faq__button {
+  background-color: $color-accent;
+  color: $color-default-white;
+}
+
+.faq__element.is-active .faq__button::after {
+  background-color: $color-default-white;
+  background-image: url("../../img/svg/minus.svg");
+}
+
+.faq__element--big .faq__button p {
+  padding: 0;
+  margin: -8px 0 0;
+
+  @include vp-1439 {
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    line-height: 18px;
+  }
+}
+
+.faq__answer p {
+  @include text(16px, 26px);
+
+  max-width: 690px;
+  margin: 19px 0 0;
+
+  @include vp-1439 {
+    @include text(16px, 20px);
+    max-width: 585px;
+    margin-top: 24px;
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+    max-width: 260px;
+    margin-top: 16px;
+  }
+}
+
+

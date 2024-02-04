@@ -1,0 +1,121 @@
+.reviews {
+  margin-bottom: 120px;
+
+  @include vp-1439 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 60px;
+  }
+}
+
+.reviews__header-container {
+  min-height: 60px;
+  margin: 0 0 36px 3px;
+}
+
+.reviews h2 {
+  @include text(50px, 50px);
+
+  color: $color-accent;
+  margin: 0;
+
+  @include vp-1439 {
+    @include text(34px, 34px);
+  }
+
+  @include vp-767 {
+    @include text(20px, 20px);
+  }
+}
+
+.reviews__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reviews__item {
+  border: 1px solid $color-accent;
+  border-radius: 16px;
+  min-height: 456px;
+  padding: 49px 50px 42px 49px;
+}
+
+.reviews__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.reviews__item-person {
+  display: flex;
+  align-items: center;
+}
+
+.reviews__item-person p {
+  @include text(18px, 24px);
+
+  color: $color-accent;
+  width: min-content;
+}
+
+.reviews__item-info {
+  display: flex;
+  gap: 25px;
+}
+
+.reviews__item-picture {
+  background-color: $color-grey;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.reviews__item-picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__item-program,
+.reviews__item-date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.reviews__item-program p,
+.reviews__item-date p {
+  @include text(12px, 12px);
+
+  text-transform: uppercase;
+  color: $color-accent;
+  margin: 0;
+}
+
+.reviews__item-program span,
+.reviews__item-date span {
+  @include text(14px, 18px);
+
+  color: $color-dark;
+  display: block;
+  margin: 0;
+}
+
+.reviews__item h3 {
+  @include text(24px, 26px);
+
+  color: $color-accent;
+  margin: 0 0 14px;
+}
+
+.reviews__item > p {
+  @include text(16px, 26px);
+
+  color: $color-dark;
+  margin: 0;
+}
