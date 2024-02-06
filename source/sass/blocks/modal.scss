@@ -1,0 +1,142 @@
+.modal {
+  background-color: $color-default-white;
+  max-width: 510px;
+  min-height: 611px;
+  padding: 60px 80px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+
+  @include vp-1439 {
+    min-height: 602px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    min-height: 521px;
+  }
+}
+
+.modal__button-close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../../img/svg/close.svg");
+  background-color: $color-transparent;
+  border: none;
+
+  @include vp-767 {
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.modal h2 {
+  @include text(32px, 36px);
+
+  color: $color-accent;
+  margin: 0 0 20px;
+
+  @include vp-1439 {
+    @include text(28px, 28px);
+  }
+
+  @include vp-767 {
+    @include text(18px, 18px);
+
+    margin-bottom: 15px;
+  }
+}
+
+.modal p {
+  @include text(16px, 26px);
+
+  color: $color-dark;
+  margin: 0 0 30px;
+
+  @include vp-1439 {
+    @include text(16px, 20px);
+  }
+
+  @include vp-767 {
+    @include text(14px, 20px);
+
+    margin-bottom: 25px;
+  }
+}
+
+.modal__input:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.modal__input label span,
+.modal__input--select label {
+  margin-bottom: 12px;
+}
+
+.modal__input label,
+.modal__input--checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: rgba($color-dark, 0.8);
+}
+
+.modal__input--checkbox label {
+  flex-direction: row;
+  align-items: center;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.modal__input input[type="checkbox"] + .modal__mark {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: $color-accent;
+  border-radius: 2px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.modal__input input[type="checkbox"]:checked + .modal__mark {
+  background-image: url("../../img/svg/check-modal.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.modal__input--checkbox p {
+  @include text(12px, 12px);
+
+  margin: 0;
+}
+
+.modal__input input,
+.modal__input textarea,
+.modal__input select {
+  width: 100%;
+  min-height: 50px;
+  background-color: $color-transparent;
+  border: 1px solid rgba($color-dark, 0.3);
+  border-radius: 8px;
+
+  @include vp-767 {
+    min-height: 44px;
+  }
+}
+
+.modal__button {
+  margin: 0 auto;
+}
+
+.modal__button p {
+  @include text(14px, 14px, $ff-medium);
+  margin: 0;
+  color: $color-accent;
+}

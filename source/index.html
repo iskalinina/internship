@@ -816,6 +816,52 @@
         <a href="#" target="_blank" rel="noreferrer noopener">Политика конфиденциальности</a>
       </div>
     </footer>
+    <div class="modal">
+        <button class="modal__button-close" type="button"></button>
+        <h2>Напишите&nbsp;нам</h2>
+        <p>Оставьте ваши контакты, если&nbsp;у&nbsp;вас остались вопросы&nbsp;— мы&nbsp;на&nbsp;них&nbsp;ответим!</p>
+        <div class="modal__form">
+          <form action="https://echo.htmlacademy.ru/" method="post" data-form="form-footer">
+            <div class="modal__input">
+              <label>
+                <span>Имя</span>
+                <input type="text" name="name" required autocomplete="off">
+              </label>
+            </div>
+            <div class="modal__input">
+              <label>
+                <span>Телефон</span>
+                <input type="tel" name="tel" required autocomplete="off">
+              </label>
+            </div>
+            <div class="modal__input modal__input--select">
+              <label for="mod-city">Выберите город</label>
+              <select name="mod-city" id="mod-city">
+                <option selected value=""></option>
+                <option value="Москва">Москва</option>
+                <option value="Оренбург">Оренбург</option>
+                <option value="Самара">Самара</option>
+                <option value="Торонто">Торонто</option>
+              </select>
+            </div>
+            <div class="modal__input modal__input--checkbox">
+              <label>
+                <input type="checkbox" name="agree" checked required>
+                <div class="modal__mark"></div>
+                <p>Я&nbsp;согласен на&nbsp;обработку моих персональных данных</p>
+              </label>
+            </div>
+            <button class="modal__button btn btn--light btn--normal" href="#">
+              <p>Отправить</p>
+              <span>
+                <svg width="20" height="10" viewBox="0 0 20 10" role="img">
+                  <use href="__spritemap#sprite-button-arrow"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+    </div>
     <div class="overlay" data-overlay="overlay"></div>
   </div>
   <script type="module" src="js/main.js"></script>
