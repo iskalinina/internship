@@ -12,6 +12,7 @@ const setSliderReviews = () => {
     scrollbar: {
       el: scrollbar,
       draggable: true,
+      dragSize: 392,
       hide: false
     },
     navigation: {
@@ -28,6 +29,9 @@ const setSliderReviews = () => {
       768: {
         slidesPerView: "auto",
         spaceBetween: 30,
+        scrollbar: {
+          dragSize: 324,
+        },
       },
       320: {
         slidesPerView: 1,
