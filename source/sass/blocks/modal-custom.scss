@@ -1,4 +1,4 @@
-.modal {
+.modal__container {
   background-color: $color-default-white;
   max-width: 510px;
   min-height: 611px;
@@ -14,6 +14,7 @@
   @include vp-767 {
     max-width: 290px;
     min-height: 521px;
+    padding: 40px 15px;
   }
 }
 
@@ -24,6 +25,7 @@
   width: 22px;
   height: 22px;
   background-image: url("../../img/svg/close.svg");
+  background-size: contain;
   background-color: $color-transparent;
   border: none;
 
@@ -65,17 +67,27 @@
   @include vp-767 {
     @include text(14px, 20px);
 
+    margin: 0 auto 25px;
+    max-width: 220px;
     margin-bottom: 25px;
   }
 }
 
 .modal__input:not(:last-child) {
   margin-bottom: 20px;
+
+  @include vp-767 {
+    margin-bottom: 15px;
+  }
 }
 
 .modal__input label span,
 .modal__input--select label {
   margin-bottom: 12px;
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
 }
 
 .modal__input label,
@@ -84,6 +96,12 @@
   flex-direction: column;
   align-items: flex-start;
   color: rgba($color-dark, 0.8);
+}
+
+.modal__input.modal__input--checkbox {
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
 }
 
 .modal__input--checkbox label {
@@ -115,6 +133,7 @@ input[type="checkbox"] {
   @include text(12px, 12px);
 
   margin: 0;
+  text-align: start;
 }
 
 .modal__input input,
@@ -133,10 +152,19 @@ input[type="checkbox"] {
 
 .modal__button {
   margin: 0 auto;
+
+  @include vp-767 {
+    width: 100%;
+  }
 }
 
 .modal__button p {
   @include text(14px, 14px, $ff-medium);
   margin: 0;
   color: $color-accent;
+
+  @include vp-767 {
+    flex-grow: 1;
+  }
 }
+

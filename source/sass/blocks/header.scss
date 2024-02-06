@@ -161,3 +161,7 @@
   background-color: $color-default-white;
   background-image: url("../../img/menu-close.svg");
 }
+
+.header__nav.is-out {
+  transform: translateY(-100%);
+}

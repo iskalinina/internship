@@ -22,3 +22,17 @@ menuToggler.addEventListener('click', onTogglerClick);
 
 overlay.addEventListener('click', onTogglerClick);
 
+
+// let scrollPrev = 0;
+//
+// window.addEventListener ('scroll', () => {
+//   const scrolled = window.pageYOffset;
+//   console.log(scrolled);
+//
+//   if (scrolled > 100 && scrolled > scrollPrev) {
+//     mainNav.classList.add('out');
+//   } else {
+//     mainNav.classList.remove('out');
+//   }
+//   scrollPrev = scrolled;
+// });

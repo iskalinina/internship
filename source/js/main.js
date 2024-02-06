@@ -2,6 +2,8 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
+import './utils/scroll-lock';
+import './utils/focus-lock';
 import {iosVhFix} from './utils/ios-vh-fix';
 import './menu/toggler.js';
 import {initAccordions} from './accordeon/init-accordion.js';
@@ -10,6 +12,7 @@ import {initSliderPrograms} from './sliders/programs-slider.js';
 import {initSliderNewsNav} from './sliders/news-nav-slider.js';
 import {initSliderNews} from './sliders/news-slider.js';
 import {initSliderReviews} from './sliders/reviews-slider.js';
+import {initModals} from './modal/init-modals.js';
 
 // ---------------------------------
 
@@ -25,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderNewsNav();
   initSliderNews();
   initSliderReviews();
+  initModals();
   // Modules
   // ---------------------------------
 
