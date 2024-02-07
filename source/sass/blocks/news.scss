@@ -29,8 +29,8 @@
     @include text(34px, 50px);
 
     padding: 0;
-    margin-bottom: 31px;
-    margin-top: -1px;
+    margin-bottom: 30px;
+    margin-top: 0;
   }
 
   @include vp-767 {
@@ -96,6 +96,11 @@
 
     padding: 8px 14px;
   }
+}
+
+.news__nav-item:hover,
+.news__nav-item:focus {
+  color: $color-accent;
 }
 
 .news__nav-item.is-active {

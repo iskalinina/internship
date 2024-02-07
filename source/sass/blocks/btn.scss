@@ -113,23 +113,23 @@
 
     &:hover,
     &:focus {
-      background-color: $color-accent;
-      color: $color-default-white;
-    }
-
-    &:active {
-      background-color: $color-accent;
-      color: rgba($color-default-white, 0.7);
-    }
-
-    &:hover span,
-    &:focus span {
       background-color: $color-default-white;
       color: $color-accent;
     }
 
-    &:active span {
+    &:active {
       background-color: $color-default-white;
+      color: rgba($color-accent, 0.7);
+    }
+
+    &:hover span,
+    &:focus span {
+      background-color: $color-accent;
+      color: $color-accent;
+    }
+
+    &:active span {
+      background-color: $color-accent;
       color: $color-accent;
     }
 
@@ -217,12 +217,12 @@
 }
 
 .btn--icon:disabled,
-.btn--icon.disabled {
+.btn--icon.is-disable {
   background-color: #a9afb7;
 }
 
 .btn--icon:disabled svg,
-.btn--icon.disabled svg {
+.btn--icon.is-disable svg {
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -233,4 +233,11 @@
 .btn--arrow:disabled svg,
 .btn--arrow.disabled svg {
   color: #a9afb7;
+}
+
+.btn--light:disabled svg,
+.btn--light.is-disable svg,
+.btn--dark:disabled svg,
+.btn--dark.is-disable svg {
+  color: rgba($color-default-white, 0.6);
 }

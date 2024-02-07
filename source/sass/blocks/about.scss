@@ -114,6 +114,17 @@
   }
 }
 
+.about__button:hover svg,
+.about__button:focus svg,
+.about__button:active svg {
+  color: $color-accent;
+  transform: rotate(45deg);
+}
+
+.about__button:active svg {
+  color: rgba($color-accent, 0.7);
+}
+
 .about__list {
   list-style-type: none;
   margin: 0;

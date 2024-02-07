@@ -12,11 +12,13 @@
 
 .header__nav {
   padding-top: 30px;
-  display: flex;
+  //display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   z-index: $index-menu;
+  transition: 0.3s;
 
   @include vp-767 {
     padding-top: 20px;
@@ -142,9 +144,15 @@
   margin-left: 20px;
 }
 
+.header__toggle-button:hover,
+.header__toggle-button:focus {
+  background-color: $color-default-white;
+  color: $color-accent;
+}
+
 .header__toggle-button:hover span,
 .header__toggle-button:focus span {
-  stroke: $color-accent;
+  background-color: $color-accent;
 }
 
 .header__toggle-button.is-open {

@@ -139,6 +139,8 @@ input[type="checkbox"] {
 .modal__input input,
 .modal__input textarea,
 .modal__input select {
+  color: $color-dark;
+  padding: 5px 25px;
   width: 100%;
   min-height: 50px;
   background-color: $color-transparent;
@@ -168,3 +170,31 @@ input[type="checkbox"] {
   }
 }
 
+.modal__button:hover p,
+.modal__button:focus p {
+  color: $color-default-white;
+}
+
+.modal__button:active p {
+  color: rgba($color-default-white, 0.7);
+}
+
+.modal__button:hover svg,
+.modal__button:focus svg,
+.modal__button:active svg {
+  color: $color-accent;
+  transform: rotate(45deg);
+}
+
+.modal__button:active svg {
+  color: rgba($color-accent, 0.7);
+}
+
+.modal__button:disabled p {
+  color: #a9afb7;
+}
+
+.modal__input.is-invalid input {
+  border-color: $color-error;
+  background-color: rgba($color-error, 0.2);
+}

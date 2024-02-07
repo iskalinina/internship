@@ -1,12 +1,14 @@
 .faq {
-  margin-bottom: 124px;
+  margin-bottom: 120px;
 
   @include vp-1439 {
-    margin-bottom: 107px;
+    margin-bottom: 100px;
   }
 
   @include vp-767 {
-    margin-bottom: 63px;
+    margin-bottom: 60px;
+    margin-top: -1px;
+    min-height: 711px;
   }
 }
 
@@ -22,17 +24,17 @@
     @include text(34px, 50px);
 
     padding: 0;
-    margin-bottom: 41px;
-    margin-top: -1px;
+    margin-bottom: 40px;
+    margin-top: 0;
   }
 
   @include vp-767 {
     @include text(20px, 20px);
 
-    padding: 2px 0 6px;
+    padding: 2px 0 7px;
     margin-right: 0;
-    margin-bottom: 27px;
-    margin-top: 0;
+    margin-bottom: 26px;
+    min-height: 25px;
   }
 }
 
@@ -49,6 +51,7 @@
   border-radius: 16px;
   min-height: 120px;
   padding: 39px;
+  transition: all $trans-default;
 
   @include vp-1439 {
     min-height: 100px;
@@ -111,6 +114,7 @@
       width: 40px;
       height: 40px;
       background-color: $color-accent;
+      border: 1px solid $color-accent;
       border-radius: 50%;
       background-image: url("../../img/svg/plus.svg");
       background-position: center;
@@ -169,12 +173,57 @@
   }
 }
 
+.faq__element:hover,
+.faq__element:focus {
+  background-color: $color-default-white;
+}
+
+.faq__element:hover button,
+.faq__element:focus button {
+  background-color: $color-default-white;
+}
+
+.faq__element:active button {
+  color: $color-accent-dark;
+}
+
+.faq__element:active button::after {
+  background-color: $color-accent-dark;
+}
+
 .faq__element.is-active .faq__button {
   background-color: $color-accent;
   color: $color-default-white;
 }
 
 .faq__element.is-active .faq__button::after {
+  background-color: $color-default-white;
+  background-image: url("../../img/svg/minus.svg");
+}
+
+.faq__element.is-active:hover,
+.faq__element.is-active:focus {
+  background-color: $color-accent;
+  border-color: $color-default-white;
+}
+
+.faq__element.is-active:hover button::after,
+.faq__element.is-active:focus button::after {
+  background-color: $color-transparent;
+  border-color: $color-default-white;
+  background-image: url("../../img/svg/minus-hover.svg");
+}
+
+.faq__element.is-active:active {
+  background-color: $color-accent-dark;
+  border-color: $color-accent-dark;
+}
+
+.faq__element.is-active:active button {
+  background-color: $color-accent-dark;
+}
+
+.faq__element.is-active:active button::after {
   background-color: $color-default-white;
   background-image: url("../../img/svg/minus.svg");
 }
@@ -192,9 +241,20 @@
   }
 }
 
+.faq__element--big .faq__button--short p {
+  @include vp-1439 {
+    max-width: 447px;
+  }
+
+  @include vp-767 {
+    max-width: 187px;
+  }
+}
+
 .faq__answer p {
   @include text(16px, 26px);
 
+  color: $color-bg;
   max-width: 690px;
   margin: 19px 0 0;
 
@@ -210,5 +270,4 @@
     margin-top: 16px;
   }
 }
-
 

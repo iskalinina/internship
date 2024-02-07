@@ -23,16 +23,16 @@ menuToggler.addEventListener('click', onTogglerClick);
 overlay.addEventListener('click', onTogglerClick);
 
 
-// let scrollPrev = 0;
-//
-// window.addEventListener ('scroll', () => {
-//   const scrolled = window.pageYOffset;
-//   console.log(scrolled);
-//
-//   if (scrolled > 100 && scrolled > scrollPrev) {
-//     mainNav.classList.add('out');
-//   } else {
-//     mainNav.classList.remove('out');
-//   }
-//   scrollPrev = scrolled;
-// });
+let scrollPrev = 0;
+
+window.addEventListener ('scroll', () => {
+  const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+  if (currentScroll && scrollPrev <= currentScroll){
+    scrollPrev = currentScroll;
+    mainNav.classList.add('is-out');
+  }else{
+    scrollPrev = currentScroll;
+    mainNav.classList.remove('is-out');
+  }
+});

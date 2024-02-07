@@ -2,8 +2,10 @@
 // import Swiper from "swiper";
 // import {Navigation, Pagination} from "swiper/modules";
 // import 'swiper/css';
+
 import './utils/scroll-lock';
 import './utils/focus-lock';
+import {Form} from './vendor/form-validate/form';
 import {iosVhFix} from './utils/ios-vh-fix';
 import './menu/toggler.js';
 import {initAccordions} from './accordeon/init-accordion.js';
@@ -18,9 +20,6 @@ import {initModals} from './modal/init-modals.js';
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
   initAccordions();
   initSliderHero();
@@ -29,15 +28,11 @@ window.addEventListener('DOMContentLoaded', () => {
   initSliderNews();
   initSliderReviews();
   initModals();
-  // Modules
-  // ---------------------------------
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  // window.addEventListener('load', () => {
-  //   const form = new Form();
-  //   window.form = form;
-  //   form.init();
-  // });
+  window.addEventListener('load', () => {
+    const form = new Form();
+    window.form = form;
+    form.init();
+  });
 });
 

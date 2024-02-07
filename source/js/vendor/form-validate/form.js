@@ -58,9 +58,9 @@ export class Form {
     return this._validator.validateFormElement(item);
   }
 
-  _onFormSubmit(event, callback = null) {
+  _onFormSubmit(event, callback = null, selector = null) {
     if (this.validateForm(event.target) && callback) {
-      this._callbacks[callback].successCallback(event);
+      this._callbacks[callback].successCallback(event, selector);
       if (this._callbacks[callback].reset) {
         setTimeout(() => {
           this.reset(event.target);
@@ -91,7 +91,7 @@ export class Form {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      this._onFormSubmit(event, callback);
+      this._onFormSubmit(event, callback, form.dataset.form);
     });
 
     form.addEventListener('input', (event) => {
