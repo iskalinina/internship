@@ -206,8 +206,8 @@
   flex-shrink: 0;
   position: relative;
 
-    &::after {
-    content: '';
+  &::after {
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -256,8 +256,8 @@ input[type="checkbox"]:disabled + .form__mark {
 }
 
 input[type="checkbox"]:checked:disabled + .form__mark {
-  border-color: #A9AFB7;
-  background-color: #A9AFB7;
+  border-color: #a9afb7;
+  background-color: #a9afb7;
 }
 
 input[type="checkbox"]:checked:disabled + .form__mark::after {
@@ -266,7 +266,8 @@ input[type="checkbox"]:checked:disabled + .form__mark::after {
 
 input[type="text"]:hover,
 input[type="tel"]:hover,
-textarea:hover {
+textarea:hover,
+select:hover {
   border-color: $color-default-white;
 }
 
@@ -288,8 +289,9 @@ textarea:disabled {
   background-color: rgba($color-default-white, 0.2);
 }
 
-span:has(+ input:disabled) {
- color: rgba($color-bg, 0.6);
+span:has(+ input:disabled),
+label:has(+ select:disabled) {
+  color: rgba($color-bg, 0.6);
 }
 
 .form__button {

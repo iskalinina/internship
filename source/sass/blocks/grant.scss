@@ -145,7 +145,7 @@
 .grant__list-item p {
   @include text(16px, 26px);
 
-  padding: 22px 25px 22px;
+  padding: 22px 25px;
   max-width: 428px;
   margin: 0;
 
@@ -191,4 +191,3 @@
     left: -16px;
   }
 }
-

@@ -4,7 +4,7 @@ import {Navigation, Pagination } from 'swiper/modules';
 const newsSlider = document.querySelector('[data-slider="news"]');
 const newsPagination = document.querySelector('[data-pagination="news-pagination"]');
 const buttonPrev = document.querySelector('[data-button="news-prev"]');
-const buttonNext = document.querySelector('[data-button="news-prev"]');
+const buttonNext = document.querySelector('[data-button="news-next"]');
 
 const setSliderNews = () => new Swiper(newsSlider, {
   modules: [Navigation, Pagination],
@@ -26,6 +26,7 @@ const setSliderNews = () => new Swiper(newsSlider, {
       slidesPerView: 3,
     },
     768: {
+      slidesPerView: 'auto',
       spaceBetween: 30,
     },
     320: {

@@ -152,6 +152,27 @@ input[type="checkbox"] {
   }
 }
 
+.modal__input input[type="text"]:hover,
+.modal__input input[type="tel"]:hover,
+.modal__input select:hover,
+.modal__input input[type="text"]:focus,
+.modal__input input[type="tel"]:focus,
+.modal__input select:focus {
+  border-color: $color-dark;
+}
+
+.modal__input input[type="text"]:disabled,
+.modal__input input[type="tel"]:disabled,
+.modal__input select:disabled {
+  border-color: rgba(#a9afb7, 0.5);
+  background-color: rgba(#a9afb7, 0.2);
+}
+
+.modal span:has(+ input:disabled),
+.modal label:has(+ select:disabled) {
+  color: #a9afb7;
+}
+
 .modal__button {
   margin: 0 auto;
 
@@ -162,6 +183,7 @@ input[type="checkbox"] {
 
 .modal__button p {
   @include text(14px, 14px, $ff-medium);
+
   margin: 0;
   color: $color-accent;
 

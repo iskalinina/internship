@@ -1,5 +1,6 @@
 .btn {
   @include text(14px, 14px, $ff-medium);
+
   display: inline-flex;
   width: min-content;
   color: $color-accent;
@@ -85,12 +86,12 @@
 
     &:disabled {
       background-color: transparent;
-      border-color: #A9AFB7;
-      color: #A9AFB7;
+      border-color: #a9afb7;
+      color: #a9afb7;
     }
 
     &:disabled span {
-      background-color: #A9AFB7;
+      background-color: #a9afb7;
       color: $color-default-white;
     }
 
@@ -135,12 +136,12 @@
 
     &:disabled {
       background-color: transparent;
-      border-color: #A9AFB7;
-      color: #A9AFB7;
+      border-color: #a9afb7;
+      color: #a9afb7;
     }
 
     &:disabled span {
-      background-color: #A9AFB7;
+      background-color: #a9afb7;
       color: $color-default-white;
     }
 
@@ -195,12 +196,12 @@
 
 .btn--light.is-disable {
   background-color: transparent;
-  border-color: #A9AFB7;
-  color: #A9AFB7;
+  border-color: #a9afb7;
+  color: #a9afb7;
 }
 
 .btn--light.is-disable span {
-  background-color: #A9AFB7;
+  background-color: #a9afb7;
   color: $color-default-white;
 }
 

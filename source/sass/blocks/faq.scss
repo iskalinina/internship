@@ -65,10 +65,10 @@
   }
 
   &--big {
-    padding: 39px 39px 33px 39px;
+    padding: 39px 39px 33px;
 
     @include vp-1439 {
-      padding: 31px 29px 25px 29px;
+      padding: 31px 29px 25px;
     }
 
     @include vp-767 {
@@ -106,24 +106,24 @@
   align-items: center;
   position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      background-color: $color-accent;
-      border: 1px solid $color-accent;
-      border-radius: 50%;
-      background-image: url("../../img/svg/plus.svg");
-      background-position: center;
-      background-repeat: no-repeat;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+    border-radius: 50%;
+    background-image: url("../../img/svg/plus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
 
-      @include vp-767 {
-        top: 4px;
-      }
+    @include vp-767 {
+      top: 4px;
     }
+  }
 
   @include vp-1439 {
     @include text(22px, 26px);
@@ -158,7 +158,7 @@
   }
 }
 
-.faq__button p {
+.faq__button div {
   margin: 0;
   padding: 6px 0 0;
   max-width: 600px;
@@ -228,7 +228,7 @@
   background-image: url("../../img/svg/minus.svg");
 }
 
-.faq__element--big .faq__button p {
+.faq__element--big .faq__button div {
   padding: 0;
   margin: -8px 0 0;
 
@@ -260,14 +260,15 @@
 
   @include vp-1439 {
     @include text(16px, 20px);
+
     max-width: 585px;
     margin-top: 24px;
   }
 
   @include vp-767 {
     @include text(14px, 20px);
+
     max-width: 260px;
     margin-top: 16px;
   }
 }
-

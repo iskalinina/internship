@@ -168,6 +168,19 @@
   }
 }
 
+.footer__social:hover svg,
+.footer__social:focus svg {
+  opacity: 0.7;
+}
+
+.footer__social:active {
+  background-color: $color-accent-dark;
+}
+
+.footer__social:active svg {
+  opacity: 1;
+}
+
 .footer__info {
   display: flex;
   justify-content: space-between;
@@ -220,8 +233,10 @@
 .footer__info a:hover,
 .footer__info a:focus {
   color: $color-accent;
+  border-color: $color-accent;
 }
 
 .footer__info a:active {
   color: $color-accent-dark;
+  border-color: $color-accent-dark;
 }

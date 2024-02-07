@@ -1,6 +1,7 @@
 .hero {
   position: relative;
 }
+
 .hero__background {
   width: 100vw;
   height: 100%;
@@ -87,6 +88,7 @@
 
 .hero__content h2 {
   @include text(54px, 62px);
+
   color: $color-accent;
   background-color: $color-default-white;
   max-width: 968px;
@@ -96,12 +98,14 @@
 
   @include vp-1439 {
     @include text(36px, 44px);
+
     max-width: 659px;
     padding: 30px 40px 24px;
   }
 
   @include vp-767 {
     @include text(22px, 26px);
+
     max-width: 290px;
     padding: 19px 14px 17px;
     border-radius: 0 16px 16px 0;
@@ -110,6 +114,7 @@
 
 .hero__content p {
   @include text(16px, 26px);
+
   color: $color-dark;
   background-color: $color-default-white;
   max-width: 526px;
@@ -119,15 +124,17 @@
 
   @include vp-1439 {
     @include text(16px, 20px);
+
     max-width: 355px;
     padding: 0 30px 35px 40px;
   }
 
   @include vp-767 {
     @include text(14px, 20px);
+
     max-width: 267px;
     padding: 0 14px 10px;
-    border-radius: 0 0 14px 0;
+    border-radius: 0 0 14px;
     position: relative;
 
     &::after {
@@ -146,7 +153,7 @@
 .hero__button-wrapper {
   background-color: $color-default-white;
   padding: 12px 50px 40px 0;
-  border-radius: 0 0 30px 0;
+  border-radius: 0 0 30px;
   position: relative;
   width: min-content;
 
@@ -161,13 +168,13 @@
     left: 100%;
   }
 
-   @include vp-1439 {
-     padding: 4px 40px 40px 0;
+  @include vp-1439 {
+    padding: 4px 40px 40px 0;
 
-     &::after {
-       top: 4px;
-     }
-   }
+    &::after {
+      top: 4px;
+    }
+  }
 
   @include vp-767 {
     padding: 10px 15px;
@@ -184,6 +191,7 @@
 .hero__button {
   @include vp-767 {
     @include text(12px, 12px, $ff-medium);
+
     letter-spacing: 0.24px;
     padding: 3px 3px 3px 19px;
   }

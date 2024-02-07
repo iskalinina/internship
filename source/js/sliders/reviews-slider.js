@@ -27,7 +27,7 @@ const setSliderReviews = () => {
         allowTouchMove: false,
       },
       768: {
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         spaceBetween: 30,
         scrollbar: {
           dragSize: 324,
